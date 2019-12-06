@@ -9,22 +9,52 @@ export default class MenuLeft extends Component {
       items: [
         {
           label: 'GENERAL',
-          items: [{label: 'Home', icon: 'pi pi-fw pi-home', url: '/admin'},
-          {label: 'User', icon: 'pi pi-fw pi-user', url: '/admin/users'},
-          {label: 'Graphiques', icon: 'pi pi-fw pi-calendar', url: '/admin/chart'}
+          items: []
+        },
+   
+        {
+          label: 'CALIBRATION',
+          items: [{label: 'En Cours', icon: 'pi pi-fw pi-home', url: '/'},
+          {label: 'Historique', icon: 'pi pi-fw pi-user', url: '/'}
+            ]
+        },
+        {
+          label: 'DEVICE SENSORS',
+          items: [{label: 'List', icon: 'pi pi-fw pi-home', url: '/'},
+          {label: 'Alert', icon: 'pi pi-fw pi-user', url: '/'}
+            ]
+        },
+        {
+          label: 'STRATEGIES',
+          items: [{label: 'List', icon: 'pi pi-fw pi-home', url: '/'},
+          {label: 'New', icon: 'pi pi-fw pi-user', url: '/'},
+          {label: 'Modify', icon: 'pi pi-fw pi-user', url: '/'},
+
+            ]
+        },
+        {
+          label: 'OBSERVATIONS',
+          items: [{label: 'List of JSON', icon: 'pi pi-fw pi-home', url: '/'},
+          {label: 'PLANNING', icon: 'pi pi-fw pi-user', url: '/'}
             ]
         },
      
 
         {
-          label: 'Api',
-          items: [  {label: 'Documentation', icon: 'pi pi-fw pi-file',url: '/admin/api' }
+          label: 'DOCUMENTATION',
+          items: [  {label: 'Documentation', icon: 'pi pi-fw pi-file',url: '//api' }
           ]
         },
         {
           label: 'Account',
           items: [{ label: 'Configuration', icon: 'pi pi-fw pi-cog', command: () => { props.history.push('/admin/config'); } },
           { label: 'Sign Out', icon: 'pi pi-fw pi-power-off', command: () => { props.logout(); } }]
+        },
+        {
+          label: 'OUTILS',
+          items: [{label: 'List', icon: 'pi pi-fw pi-home', url: '/admin'},
+          {label: 'Alert', icon: 'pi pi-fw pi-user', url: '/admin/users'}
+            ]
         },
       ]
     };
