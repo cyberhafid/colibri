@@ -68,7 +68,7 @@ export class ComboChart extends Component {
             <div>
            
                 <div className="content-section implementation">
-                    <h3>Combo Chart</h3>
+                    <p>Combo Chart</p>
                     <Chart type="bar" data={data} options={options} />
                 </div>
             </div>

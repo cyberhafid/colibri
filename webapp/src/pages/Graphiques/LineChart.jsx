@@ -96,7 +96,7 @@ export class LineChart extends Component {
         
                 <div className="content-section implementation">
          
-                    <h3>Line Styles</h3>
+                    <p>Line Styles</p>
                     <Chart type="line" data={lineStylesData}  />
                 </div>
             </div>
