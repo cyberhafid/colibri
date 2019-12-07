@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabView, TabPanel } from 'primereact/tabview';
-import { DeviceArray } from '../components/Devic/DeviceArray';
+import DeviceArray from '../components/Devic/DeviceArray';
 
 function DevicePanel() {
   return (
