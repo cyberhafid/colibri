@@ -1,14 +1,14 @@
  
 import axios from 'axios';
-//import {listedevice  from '../json/sensors.json';
+import listedevice  from '../json/sensors.json';
 
-export  class DeviceService {
+export default class DeviceService {
 
 
 
 
 getDeviceName() {
-  const listedevice = require('../json/sensors.json');
+ // const listedevice = require('../json/sensors.json');
   return  axios
   .get(listedevice
 )
