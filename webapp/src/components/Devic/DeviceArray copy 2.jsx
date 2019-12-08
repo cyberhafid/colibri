@@ -66,43 +66,69 @@ export default class DeviceArray extends Component {
             return { label: icon.device_name, value: icon.device_name };
         });
 
-        let deviceg2 = sensors.entities.map((icon) => {
+        let deviceg = sensors.entities.map((icon) => {
             return {  label: icon.device_group, value: icon.device_group };
         });
 
-        let tableauAvecDoublons = sensors.entities.map((a) => {
+
+        let deviceg2 = sensors.entities.map((a) => {
             //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
             return (a.device_group)
          }  
         );
- 
-        let deviceg = Array.from(new Set(tableauAvecDoublons));
 
-  
+        let deviceg3 = sensors.entities.filter((a) => a.device_group === a.device_group).map((a) => {
+            //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
+            return (a.device_group)
+         }  
+        );
 
-   console.log(JSON.stringify(deviceg));
+        let deviceg4 = sensors.entities.filter((a) => a.device_group === a.device_group).map((a) => {
+            //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
+            return (a.device_group)
+         }  
+        );
+        let getMapFromArray = deviceg.reduce((acc, item) => {
+                 acc[item.device_group] = { type: item.device_group };
+      
+          return acc;
+        }, {});
+      
+        let newTab = [...new Set(deviceg2)]; 
+
+        let tableauAvecDoublons = deviceg;
+        let tableauSansDoublon = Array.from(new Set(newTab));
+       // console.table(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
 
 
+    var cache = {};
+    let monTableau = deviceg.filter(function(elem,index,array){
+        return cache[elem.label]?0:cache[elem.label]=1;
+    });
+    // affichage
+    console.log(JSON.stringify(tableauSansDoublon));
+      
+      // console.log('aaaaddaa' + JSON.stringify(deviceg4))
+        //console.log('ddddddd'+JSON.stringify(sensors))
 
+        
 
         return (
             <div>
-  
      
                 <div className="container">
                     <div className="row">
                     <div className="col-sm-5">
                             <h5>Device Group </h5>
-                            <Dropdown style={{width: '100%'}} value={this.state.deviceg} options={deviceg} onChange={this.onDevicenGroup} placeholder="Select a Device Name" />
+                            <Dropdown style={{width: '100%'}} value={this.state.deviceg} options={deviceg} onChange={this.onDevicenName} placeholder="Select a Device Name" />
 
                             </div>
-                        <div className="col-sm-5">
+                        <div className="col-sm-4">
                             <h5>Device name</h5>
-                            <Dropdown  style={{width: '100%'}} value={this.state.devicen} options={devicen} onChange={this.onDevicenName} placeholder="Select a Device Name" />
+                            <Dropdown value={this.state.devicen} options={devicen} onChange={this.onDevicenName} placeholder="Select a Device Name" />
                         </div>
                     </div>
                 </div>
-
 
                 <div className="content-section implementation">
                     <DataTable value={this.state.datacam} headerColumnGroup={headerGroup}>
