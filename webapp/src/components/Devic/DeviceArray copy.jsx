@@ -55,7 +55,11 @@ const cities = require('../../json/sensors.json');
 
 console.log('ddddddd'+JSON.stringify(this.state.devices))
 //console.log('ddddddd'+JSON.stringify(this.state.services))
-
+let deviceg2 = sensors.entities.filter(filtre => filtre.price <= maxPrice )map((a) => {
+    //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
+    return (a.device_group)
+ }  
+);
 
         return (
             <div>
