@@ -24,15 +24,16 @@ export default class DeviceArray extends Component {
                 { filter: 'List of Picture', camOne: 'PLOTS', camTwo: '40%', camThree: '$54,406.00' }
 
             ],
-            caty: null,
-            categorizesl: null,
-            categorizes: [],
-            groupsl: null,
-            groups: [],
-            groupse: [],
-            groupy: null,
-            devicesl: null,
-            devices: []
+
+            categorieta: [],
+            categorieli: null,
+            categorieid: null,
+            groupta: [],
+            groupli: null,
+            groupid: null,
+            deviceta: [],
+            deviceli: null,
+            deviceid: null,
         };
         this.serviceactiv = new DeviceService();
         this.onDevicenCategorize = this.onDevicenCategorize.bind(this);
@@ -41,38 +42,42 @@ export default class DeviceArray extends Component {
 
     }
     componentDidMount() {
-        this.serviceactiv.getJson().then(datas => this.setState({ categorizes: datas }));
-        // this.serviceactiv.getJson().then(datas => this.setState({ groups: datas.Environment}));
-        // this.serviceactiv.getJson().then(datas => this.setState({ devices: datas.Environment.Weather}));
-        console.log('didmount' + JSON.stringify(this.state.groupy))
+        this.serviceactiv.getJson().then(datas => this.setState({ categorieta: datas }));
+       //this.serviceactiv.getJson().then(datas => this.setState({ groupta: datas.Environment}));
+       this.serviceactiv.getJson().then(datas => this.setState({ deviceta: datas.Environment.Weather}));
+       // console.log('didmount' + JSON.stringify(this.state.categorizes))
+       console.log('ddddddd' + JSON.stringify(this.state.sensors));
 
     }
 
     onDevicenCategorize(event) {
-        this.setState({ caty: event.value, groupse: event.value });
-        this.serviceactiv.getJson().then(datas => this.setState({ groups: datas.Environment }));
-    }
+        this.setState({ categorieid: event.value, groupta: event.value });
+       this.serviceactiv.getJson().then(datas => this.setState({ groupta: datas.Environment},console.log('ddddddd' + JSON.stringify(this.state.categorieid.icon ))));
+        //this.serviceactiv.getJson().then(datas => this.setState({ groupta: datas`{. this.state.categorieid}`  }));
+   }
+
+
     onDevicenGroup(event) {
-        this.setState({ groupy: event.value });
+        this.setState({ groupid: event.value });
     }
 
     onDevicenDevice(event) {
-        this.setState({ devicy: event.value });
+        this.setState({ deviceid: event.value });
     }
 
     render() {
 
-        let categorizesl = Object.keys(this.state.categorizes).map((icon) => {
+        let categorieli = Object.keys(this.state.categorieta).map((icon) => {
             return { label: icon, value: icon };
         });
-        let groupsl = Object.keys(this.state.groups).map((icon) => {
+        let groupli = Object.keys(this.state.groupta).map((icon) => {
             return { label: icon, value: icon };
         });
-        let devicesl = (this.state.devices).map((icon) => {
+        let deviceli = (this.state.deviceta).map((icon) => {
             return { label: icon.device_name, value: icon.device_name };
         });
 
-        console.log('ddddddd' + JSON.stringify(this.state.groupy))
+        //console.log('ddddddd' + JSON.stringify(this.state.categorieid))
         let headerGroup = <ColumnGroup>
 
             <Row>
@@ -94,23 +99,23 @@ export default class DeviceArray extends Component {
                         <div className="col-sm-4">
 
                             <h3>categories</h3>
-                            <Dropdown value={this.state.caty} options={categorizesl} onChange={this.onDevicenCategorize} placeholder="Select a categories" optionLabel="label" />
-                            <div style={{ marginTop: '.5em' }}>{this.state.caty ? 'Selected City: ' + this.state.caty.label : 'No city selected'}</div>
+                            <Dropdown value={this.state.categorieid} options={categorieli} onChange={this.onDevicenCategorize} placeholder="Select a categories" optionLabel="label" />
+                            <div style={{ marginTop: '.5em' }}>{this.state.categorieid ? 'Selected City: ' + this.state.categorieid.label : 'No city selected'}</div>
                         </div>
 
 
                         <div className="col-sm-4">
 
                             <h3>Group</h3>
-                            <Dropdown value={this.state.groupy} options={groupsl} onChange={this.onDevicenGroup} placeholder="Select a group" optionLabel="label" />
-                            <div style={{ marginTop: '.5em' }}>{this.state.groupy ? 'Selected City: ' + this.state.caty + '.' + this.state.groupy.label : 'No city selected'}</div>
+                            <Dropdown value={this.state.groupid} options={groupli} onChange={this.onDevicenGroup} placeholder="Select a group" optionLabel="label" />
+                            <div style={{ marginTop: '.5em' }}>{this.state.groupid ? 'Selected City: ' + this.state.groupid.label + '.' + this.state.groupid.label : 'No city selected'}</div>
                         </div>
 
                         <div className="col-sm-4">
 
                             <h3>Device</h3>
-                            <Dropdown value={this.state.devicy} options={devicesl} onChange={this.onDevicenDevice} placeholder="Select a device" optionLabel="label" />
-                            <div style={{ marginTop: '.5em' }}>{this.state.devicy ? 'Selected City: ' + this.state.devicy.label : 'No city selected'}</div>
+                            <Dropdown value={this.state.deviceid} options={deviceli} onChange={this.onDevicenDevice} placeholder="Select a device" optionLabel="label" />
+                            <div style={{ marginTop: '.5em' }}>{this.state.deviceid ? 'Selected City: ' + this.state.deviceid.label : 'No city selected'}</div>
                         </div>
 
                     </div>
