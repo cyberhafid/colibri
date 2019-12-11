@@ -1,0 +1,50 @@
+{
+    "Environment": {
+        "Weather": [
+            {
+                "device_name": "Rain detector",
+                "device_value": "",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "C",
+                "device_error_code": "0"
+            },
+            {
+                "device_name": "Vent"
+            },
+            {
+                "device_name": "Nuage"
+            },
+            {
+                "device_name": "lumiere du jour"
+            },
+        ],
+        "atenna": [],
+        "Gps": [],
+        "webcam": [],
+        "building": [],
+        "dome controller": [],
+        "reseau": []
+    },
+    "Instruments": {
+        "cagir": [
+            {
+                "device_name": "Cagir Satus",
+                "device_value": "+21.1",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "environmental-sensors",
+                "device_pretty_name": "enclosure temperature",
+                "device_model": "iButtonLink MS-TH",
+                "device_identifier": "26.A493A0000000",
+                "device_firmware": "",
+                "device_type": "float",
+                "device_unit": "C",
+                "device_error_code": 0
+            }
+        ]
+    }

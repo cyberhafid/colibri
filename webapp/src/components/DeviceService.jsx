@@ -1,14 +1,14 @@
  
 import axios from 'axios';
 import listedevice  from '../json/sensors.json';
+const data = require('../json/colibri');
 
 export default class DeviceService {
 
-
+  //export class HandiService {
 
 
 getDeviceName() {
- // const listedevice = require('../json/sensors.json');
   return  axios
   .get(listedevice
 )
@@ -24,6 +24,9 @@ getTyope() {
 }
 
 
+async getJson() {
+  return await data
+}
 
 }
 

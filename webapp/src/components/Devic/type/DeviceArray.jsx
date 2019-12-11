@@ -5,7 +5,7 @@ import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import { Dropdown } from 'primereact/dropdown';
 import DeviceService from '../DeviceService';
-import sensors from "../../json/sensors";
+import sensors from "../../json/colibri";
 
 export default class DeviceArray extends Component {
 
@@ -23,21 +23,41 @@ export default class DeviceArray extends Component {
                 { filter: 'List of Picture', camOne: 'PLOTS', camTwo: '40%', camThree: '$54,406.00' }
 
             ],
+            categories: [
+                { name: 'FLAT', details: 'PLOTS', },
+                { name: 'FLAT2', details: 'PLOTS', }
+
+
+            ],
+            categorizes: [],
+           
             services: [],
+            users: [],
+            categorize:null,
             devicen: null,
-            deviceg: null,
-            devicee: null
+            group:[]
         };
         this.serviceactiv = new DeviceService();
         this.onDevicenName = this.onDevicenName.bind(this);
         this.onDevicenGroup = this.onDevicenGroup.bind(this);
+        this.onDevicenCategorize = this.onDevicenCategorize.bind(this);
+
 
     }
 
 
     componentDidMount() {
-        this.serviceactiv.getTyope().then(data => this.setState({ services: data }));
+         this.serviceactiv.getJson().then(datas => this.setState({ categorizes: datas}));
 
+         this.serviceactiv.getJson().then(datas => this.setState({ devices: datas.Environment.Weather}));
+    }
+
+
+    onDevicenCategorize(event) {
+        this.setState({ categorize: event.value});
+        //console.log(JSON.stringify(this.state.categories));
+
+       // this.serviceactiv.getJson().then(datas => this.setState({ groupe: datas.this.state.categorize}));
     }
 
     onDevicenName(event) {
@@ -61,74 +81,37 @@ export default class DeviceArray extends Component {
             </Row>
         </ColumnGroup>;
 
-        //let brands = this.state.services;
-        let devicen = sensors.entities.map((icon) => {
-            return { label: icon.device_name, value: icon.device_name };
+
+
+        let categorizesl = Object.keys(this.state.categorizes).map((icon, key) => {
+            return { label: icon, value: icon.key };
         });
 
-        let deviceg = sensors.entities.map((icon) => {
-            return {  label: icon.device_group, value: icon.device_group };
-        });
+       // let groupl = this.state.categories.map((icon) => {
+         //   return { label: icon, value: icon };
+        //});
 
+        console.log(JSON.stringify(categorizesl));
+    
 
-        let deviceg2 = sensors.entities.map((a) => {
-            //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
-            return (a.device_group)
-         }  
-        );
-
-        let deviceg3 = sensors.entities.filter((a) => a.device_group === a.device_group).map((a) => {
-            //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
-            return (a.device_group)
-         }  
-        );
-
-        let deviceg4 = sensors.entities.filter((a) => a.device_group === a.device_group).map((a) => {
-            //console.log('aaaaddaa' + JSON.stringify(icon.device_group));
-            return (a.device_group)
-         }  
-        );
-        let getMapFromArray = deviceg.reduce((acc, item) => {
-                 acc[item.device_group] = { type: item.device_group };
-      
-          return acc;
-        }, {});
-      
-        let newTab = [...new Set(deviceg2)]; 
-
-        let tableauAvecDoublons = deviceg;
-        let tableauSansDoublon = Array.from(new Set(newTab));
-       // console.table(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
-
-
-    var cache = {};
-    let monTableau = deviceg.filter(function(elem,index,array){
-        return cache[elem.label]?0:cache[elem.label]=1;
-    });
-    // affichage
-    console.log(JSON.stringify(tableauSansDoublon));
-      
-      // console.log('aaaaddaa' + JSON.stringify(deviceg4))
-        //console.log('ddddddd'+JSON.stringify(sensors))
-
-        
 
         return (
             <div>
-     
+
+
                 <div className="container">
                     <div className="row">
-                    <div className="col-sm-5">
-                            <h5>Device Group </h5>
-                            <Dropdown style={{width: '100%'}} value={this.state.deviceg} options={deviceg} onChange={this.onDevicenName} placeholder="Select a Device Name" />
-
-                            </div>
                         <div className="col-sm-4">
-                            <h5>Device name</h5>
-                            <Dropdown value={this.state.devicen} options={devicen} onChange={this.onDevicenName} placeholder="Select a Device Name" />
+                            <h5>Categorize</h5>
+                            <Dropdown style={{ width: '100%' }} value={this.state.categories} options={categorizesl} onChange={this.onDevicenCategorize} placeholder="Select a Device Name" />
+                        </div>
+                        <div className="col-sm-4">
+                            <h5>Group</h5>
+                          
                         </div>
                     </div>
                 </div>
+
 
                 <div className="content-section implementation">
                     <DataTable value={this.state.datacam} headerColumnGroup={headerGroup}>

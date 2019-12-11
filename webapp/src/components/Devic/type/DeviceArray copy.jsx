@@ -4,7 +4,7 @@ import { Column } from 'primereact/column';
 import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import {Dropdown} from 'primereact/dropdown';
-import { DeviceService } from '../DeviceService';
+import { DeviceService } from '../../DeviceService';
 export class DeviceArray extends Component {
 
     constructor() {
