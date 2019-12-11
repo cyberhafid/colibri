@@ -5,6 +5,8 @@ import { TabView, TabPanel } from 'primereact/tabview';
 import { CalibrationArrayCam } from '../components/Calib/CalibrationCam';
 import { CalibrationArray } from '../components/Calib/CalibrationArray';
 import CalibInfo from './calibration/CalibInfo';
+import CalibCam from './calibration/CalibCam';
+import { CalibrationHistorique } from '../components/Calib/CalibrationHistorique';
 
 function Calibration() {
   return (
@@ -32,7 +34,7 @@ function Calibration() {
           </TabPanel>
 
 
-          <TabPanel header="Camera 1">
+          <TabPanel header="CAGIRE 1">
             <div>
               <Panel header="Camera 1">
                 <CalibrationFilter />
@@ -42,13 +44,51 @@ function Calibration() {
 
           </TabPanel>
 
-          <TabPanel header="Informations">
+
+
+          <TabPanel header="CAGIRE 2">
+            <div>
+              <Panel header="Camera 2">
+                <CalibrationFilter />
+              </Panel>
+              <CalibrationArrayCam />
+            </div>
+
+          </TabPanel>
+
+          <TabPanel header="DDRAGO">
+            <div>
+              <Panel header="Camera 2">
+                <CalibrationFilter />
+              </Panel>
+              <CalibrationArrayCam />
+            </div>
+
+          </TabPanel>
+
+
+          <TabPanel header="Historique">
+            <div>
+        <CalibrationHistorique />
+            </div>
+
+          </TabPanel>
+
+
+
+          <TabPanel header="Informations image">
             <div>
         <CalibInfo />
             </div>
 
           </TabPanel>
 
+          <TabPanel header="Informations Camera">
+            <div>
+        <CalibCam />
+            </div>
+
+          </TabPanel>
 
 
         </TabView>

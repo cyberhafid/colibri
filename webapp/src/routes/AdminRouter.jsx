@@ -6,6 +6,8 @@ import DocApi from '../pages/DocApi';
 import Calibration from '../pages/CalibrationPanel';
 import BiasPanel from '../pages/BiasPanel';
 import DevicePanel from '../pages/DevicePanel';
+import ObservationPanel from '../pages/ObservationPanel';
+import StrategiePanel from '../pages/StrategiePanel';
 
 export default class AdminRouter extends Component {
   render() {
@@ -17,6 +19,8 @@ export default class AdminRouter extends Component {
         <Route  exact path='/admin/graphique' component={Dashboard} />
         <Route  exact path='/admin/masterbias' component={BiasPanel} />
         <Route  exact path='/admin/device' component={DevicePanel} />
+        <Route  exact path='/admin/observation' component={ObservationPanel} />
+        <Route  exact path='/admin/strategie' component={StrategiePanel} />
 
         <Route   path='/admin/api' component={DocApi} />
     </Switch>
