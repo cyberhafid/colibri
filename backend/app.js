@@ -19,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/indice', indices);
+app.use('/api/v1/examples', examplesRouter);
 
 module.exports = app;
