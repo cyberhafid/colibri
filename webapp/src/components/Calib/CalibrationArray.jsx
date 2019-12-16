@@ -43,9 +43,9 @@ export class CalibrationArray extends Component {
                                 <Column header="Camera" colSpan={3} />
                             </Row>
                             <Row>
-                                <Column header="Camera 1"  />
-                                <Column header="Camera 2" />
-                                <Column header="CAGGIR" />
+                                <Column header="CAGIRE 1"  />
+                                <Column header="CAGIRE 2" />
+                                <Column header="DDRAGO" />
                             </Row>
                      
                         </ColumnGroup>;

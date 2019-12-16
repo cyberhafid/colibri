@@ -15,7 +15,9 @@ export default class MenuLeft extends Component {
         {
           label: 'CALIBRATION',
           items: [{ label: 'Plots Camera', icon: 'pi pi-fw pi-home', url: '/admin/calibration' },
-          { label: 'Master Bias', icon: 'pi pi-fw pi-user', url: '/admin/masterbias' }
+          { label: 'Master Bias', icon: 'pi pi-fw pi-user', url: '/admin/masterbias' },
+
+          { label: 'Fits', icon: 'pi pi-fw pi-user', url: '/admin/fits' }
           ]
         },
         {
@@ -27,7 +29,7 @@ export default class MenuLeft extends Component {
         {
           label: 'STRATEGIES',
           items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin/strategie' },
-          { label: 'New or modify', icon: 'pi pi-fw pi-user', url: '/' },
+          { label: 'New or modify', icon: 'pi pi-fw pi-user', url: '/' }
 
 
           ]

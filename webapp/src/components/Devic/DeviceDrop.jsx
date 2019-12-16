@@ -135,3 +135,4 @@ export default class DeviceArray extends Component {
         );
     }
 }
+
