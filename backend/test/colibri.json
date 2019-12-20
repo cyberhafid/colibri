@@ -1,72 +1,1011 @@
 {
-
-   
-            "Environment": [
-                {
-                    "Weather": [
-                        {
-                            "device_name": "Rain detector",
-                            "device_value": "+21.1",
-                            "device_date": "2019-10-02T23:59:05",
-                            "device_group": "environmental-sensors",
-                            "device_pretty_name": "enclosure temperature",
-                            "device_model": "iButtonLink MS-TH",
-                            "device_identifier": "26.A493A0000000",
-                            "device_firmware": "",
-                            "device_type": "float",
-                            "device_unit": "C",
-                            "device_error_code": 0
-                        },
-                        {
-                            "device_name": "Vent",
-                            "device_value": "+21.1",
-                            "device_date": "2019-10-02T23:59:05",
-                            "device_group": "environmental-sensors",
-                            "device_pretty_name": "enclosure temperature",
-                            "device_model": "iButtonLink MS-TH",
-                            "device_identifier": "26.A493A0000000",
-                            "device_firmware": "",
-                            "device_type": "float",
-                            "device_unit": "C",
-                            "device_error_code": 0
-                        }
-                    ],
-                    "antenna": [
-                        {
-                            "device_name": "uhf",
-                            "device_value": "+21.1",
-                            "device_date": "2019-10-02T23:59:05",
-                            "device_group": "environmental-sensors",
-                            "device_pretty_name": "enclosure temperature",
-                            "device_model": "iButtonLink MS-TH",
-                            "device_identifier": "26.A493A0000000",
-                            "device_firmware": "",
-                            "device_type": "float",
-                            "device_unit": "C",
-                            "device_error_code": 0
-                        }
-                    ]
-                }
-            ],
-            "Instruments": [
-                {
-                    "cagir": [
-                        {
-                            "device_name": "Cagir Satus",
-                            "device_value": "+21.1",
-                            "device_date": "2019-10-02T23:59:05",
-                            "device_group": "environmental-sensors",
-                            "device_pretty_name": "enclosure temperature",
-                            "device_model": "iButtonLink MS-TH",
-                            "device_identifier": "26.A493A0000000",
-                            "device_firmware": "",
-                            "device_type": "float",
-                            "device_unit": "C",
-                            "device_error_code": 0
-                        }
-                    ]
-                }
-                   ]
-        
-              
+    "Scheduler": {
+        "schedule": [
+            {
+                "device_name": "date start",
+                "device_value": "date ask",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "Starting date of scheduling.",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "date",
+                "device_error_code": 0
+            },
+            {
+                "device_name": " programme type",
+                "device_value": "0=Normal, 1=Large, 2=DDT, 3=Short, 4=Calibration, 5=Monitoring",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "number",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Telescope time ",
+                "device_value": "Time",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "Period or time span",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "sec",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "rule calibration",
+                "device_value": "id calibration",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "Period or time span",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "sec",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "log file name"
+            },
+            {
+                "device_name": "Level name"
+            },
+            {
+                "device_name": "message"
+            }
+        ],
+        "Status communication": [
+            {
+                "device_name": "action/comment"
+            }
+        ],
+        "Status observation": [
+            {
+                "device_name": "name of investigator",
+                "device_value": "name",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "A VISTA/VIRCAM survey for kilonova counterparts to gravitational wave sources",
+                "device_model": "plot",
+                "device_identifier": "DDT",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "string",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Observing mode",
+                "device_value": "percunt control",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "of the total time available for observations",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "number",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Target of Opportunity",
+                "device_value": "percunt control",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "",
+                "device_model": "",
+                "device_identifier": "ToO",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "number",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Science spectrometer resolution",
+                "device_value": "MED",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "www.eso.org/p1demo",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Type of Coude guiding",
+                "device_value": "ADAPT_OPT",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "www.eso.org/p1demo",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Interferometric Array",
+                "device_value": "small,medium",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "www.eso.org/p1demo",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Types of interferometric observations",
+                "device_value": "snapshot",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "www.eso.org/p1demo",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Target +hdtest",
+                "device_value": "RA: 00:10:00.000,",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": " Dec: 01:00:00.000",
+                "device_pretty_name": "Turbulence: 50% (Seeing < 1.0 arcsec, t0 > 3.2 ms) ",
+                "device_model": "pwv: 30mm ",
+                "device_identifier": " Sky: CLR",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Mags Fluxes",
+                "device_value": "V R L M,",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": " ",
+                "device_pretty_name": " REF START",
+                "device_model": " ",
+                "device_identifier": " ",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Telescope Time [s]",
+                "device_value": "5400",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": " ",
+                "device_pretty_name": " ",
+                "device_model": " ",
+                "device_identifier": " ",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+        ]
+    },
+    "Telescope": {
+        "optique": [
+            {
+                "device_name": "Characteristic Data",
+                "device_value": "Sky spectra, template spectra, telescope efficiencies, photometrics filters, filters, grating, grisms,cameras, detectors, optics , fudges  ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "filter, optics , detector, fudge",
+                "device_model": "",
+                "device_identifier": "http://www.eso.org/observing/etc/bin/gen/form?INS.NAME=CALIBDISP+INS.MODE=MAIN",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "capteur GFT-REQ-93"
+            },
+            {
+                "device_name": "pression huile"
+            },
+            {
+                "device_name": "temperature"
+            },
+            {
+                "device_name": "humidité"
+            },
+            {
+                "device_name": "temperature cryostant"
+            },
+            {
+                "device_name": "Efficiency Measurements",
+                "device_value": "Source http://www3.mpifr-bonn.mpg.de/",
+                "device_date": "2019-10-02T23:59:05",
+                "device_pretty_name": "Θd[ 6.58",
+                "device_model": "ηf (η) 0.95",
+                "device_identifier": "ToO",
+                "device_firmware": "Subarray LFA",
+                "device_type": "ν[GHz] 660.4",
+                "device_unit": "number",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "detetecteurs"
+            }
+        ],
+        "Telescope Status": [
+            {
+                "device_name": "action/comment"
+            },
+            {
+                "device_name": "OBS.PROG.ID"
+            },
+            {
+                "device_name": "OBS.ID"
+            },
+            {
+                "device_name": "RA"
+            },
+            {
+                "device_name": "DEC"
+            },
+            {
+                "device_name": "http://www.eso.org/sci/php/sciops/RRM/rrmLog_FORS2.html"
+            }
+        ]
+    },
+    "Environment": {
+        "Weather": [
+            {
+                "device_name": "Photométrique",
+                "device_value": "",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": " transparency variations under 2%, only assessable ",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Clear",
+                "device_value": "",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Turbulence category ",
+                "device_value": "40",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "for instruments without AO system",
+                "device_model": "Seeing threshold 0.5",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "%",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Moon",
+                "device_value": "Lunar Phase ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": " 'd' (dark time) corresponds to FLI < 0.4",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "1.0",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Precipitable Water Vapour ",
+                "device_value": "10mm ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "10mm for VISIR, 20mm for KMOS, and 30mm for all",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "mm",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Percent Chance of Success ",
+                "device_value": "87 ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "10mm for VISIR, 20mm for KMOS, and 30mm for all",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "%",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Rain detector",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Clouds",
+                "device_value": "cover  ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "%Total 69,   %Opaque 46,   %Transp23 " ,
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "mm",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Turbulence optique",
+                "device_value": " https://tel.archives-ouvertes.fr/tel-00271689/document ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "Nb of sets",
+                "device_pretty_name": " hgs(km) -2,90" ,
+                "device_model": "angle from senith 35",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "mm",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Daylight detection",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Dew point temp 30 m",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Relative humidity at 30 m",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Relative humidity at 2 m",
+                "device_value": "PWV  ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "Avg 55,4 %, sig UTH 26,7",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "mm",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Temperature at 2m",
+                "device_value": "30°  ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "records de température à 50",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "mm",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Temperature at 30 m",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Wind speed at 30 m, ",
+                "device_value": " m/s  ",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "A",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "m",
+                "device_error_code": 0
+            },
+     
+            {
+                "device_name": "Air quality",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "Uv index",
+                "device_error_code": 0
+            },
+            {
+                "device_name": "pressure",
+            },
+            {
+                "device_name": "civil twilight"
+            },
+            {
+                "device_name": "nautical"
+            },
+            {
+                "device_name": "astronomical twilight"
+            },
+            {
+                "device_name": "length of visible"
+            },
+            {
+                "device_name": "length a day"
+            }
+        ],
+        "Lighting": [
+            {
+                "device_name": ""
+            }
+        ],
+        "air conditionning": [
+            {
+                "device_name": ""
+            }
+        ],
+        "chillers": [
+            {
+                "device_name": ""
+            }
+        ],
+        "user": [
+            {
+                "device_name": "connection"
+            },
+            {
+                "device_name": "host ip"
+            }
+        ]
+    },
+    "Instruments": {
+        "antenna": [
+            {
+                "device_name": ""
+            }
+        ],
+        "GPS": [
+            {
+                "device_name": ""
+            }
+        ],
+        "Webcam": [
+            {
+                "device_name": ""
+            }
+        ],
+        "building": [
+            {
+                "device_name": "Dew point"
+            }
+        ],
+        "PLC": [
+            {
+                "device_name": "Global satus connection GCC"
+            },
+            {
+                "device_name": "Send Message"
+            },
+            {
+                "device_name": "Rceive Message"
+            },
+            {
+                "device_name": "Telescope Room Lith"
+            },
+            {
+                "device_name": "Telescope Room shutter"
+            },
+            {
+                "device_name": "Flat Field Light"
+            },
+            {
+                "device_name": "Shuttler"
+            },
+            {
+                "device_name": "Telescope off"
+            },
+            {
+                "device_name": "Intrusion"
+            },
+            {
+                "device_name": "Emergency button push"
+            },
+            {
+                "device_name": "Dcc communication failure"
+            },
+            {
+                "device_name": "Main power failure"
+            },
+            {
+                "device_name": "Rceive Message"
+            },
+            {
+                "device_name": "Cloud detection"
+            },
+            {
+                "device_name": "Ups satus"
+            }
+        ],
+        "COM": [
+            {
+                "device_name": "COM GCC CPG"
+            },
+            {
+                "device_name": "COM GCC GP2"
+            }
+        ],
+        "NIR ET VIS": [
+            {
+                "device_name": "Processing"
+            },
+            {
+                "device_name": "All data"
+            },
+            {
+                "device_name": "Rceive Message"
+            },
+            {
+                "device_name": "Rceive Message"
+            }
+        ],
+        "PYROS OCS": [
+            {
+                "device_name": "Signal to noise ration"
+            },
+            {
+                "device_name": "Exposure time"
+            },
+            {
+                "device_name": "Vis or nir"
+            },
+            {
+                "device_name": "Magnitude limit"
+            },
+            {
+                "device_name": "Vc"
+            },
+            {
+                "device_name": "Target visible"
+            },
+            {
+                "device_name": "visibility interval"
+            },
+            {
+                "device_name": "Vc image simulator"
+            },
+            {
+                "device_name": "target observable "
+            },
+            {
+                "device_name": "above Horizon"
+            },
+            {
+                "device_name": "behind Moon"
+            },
+            {
+                "device_name": "Moon phase"
+            },
+            {
+                "device_name": "Moon distance"
+            },
+            {
+                "device_name": ""
+            },
+            {
+                "device_name": ""
+            }
+        ],
+        "ASK PYROS OCS VC ICS": [
+            {
+                "device_name": "Ex vc image sim"
+            },
+            {
+                "device_name": "test star"
+            },
+            {
+                "device_name": "ra=time"
+            },
+            {
+                "device_name": "dec time"
+            },
+            {
+                "device_name": "epoch 200"
+            },
+            {
+                "device_name": "observable"
+            },
+            {
+                "device_name": "L35"
+            }
+        ],
+        "PYROS": [
+            {
+                "device_name": "ERO audela"
+            },
+            {
+                "device_name": "sgbd"
+            }
+        ],
+        "Vis cam DDRAGO": [
+            {
+                "device_name": ""
+            }
+        ],
+        "GCC": [
+            {
+                "device_name": "status"
+            },
+            {
+                "device_name": "start"
+            },
+            {
+                "device_name": "start end"
+            },
+            {
+                "device_name": "communication"
+            },
+            {
+                "device_name": "main power failure"
+            }
+        ]
+    },
+    "Hardware": {
+        "INFORMATIQUE": [
+            {
+                "device_name": "reseau"
+            },
+            {
+                "device_name": "computer"
+            },
+            {
+                "device_name": "nas"
+            },
+            {
+                "device_name": "data"
+            },
+            {
+                "device_name": "sauvegarde"
+            },
+            {
+                "device_name": "protection"
+            },
+            {
+                "device_name": "FileSyn"
+            },
+            {
+                "device_name": "Ups"
+            }
+        ]
+    },
+    "CAGIR": {
+        "CAGIR status": [
+            {
+                "device_name": "capteur GFT-REQ-93"
+            }
+        ],
+        "CAGIR Request": [
+            {
+                "device_name": "capteur GFT-REQ-93"
+            }
+        ],
+        "CAGIR Sofradir": [
+            {
+                "device_name": "capteur GFT-REQ-93"
+            }
+        ],
+        "CAGIR Header": [
+            {
+                "device_name": "Filter-pos"
+            }                        {
+                "device_name": "Focus-pos"
+            }                        {
+                "device_name": "Detector temperature"
+            }                        {
+                "device_name": "Cryostat pression"
+            }
+        ],
+        "CAGIR Acquisition": [
+            {
+                "device_name": "current exposure identity"
+            }                        {
+                "device_name": "ramp-ind"
+            }                        {
+                "device_name": "read"
+            }
+        ],
+        "Ramps": [
+            {
+                "device_name": "ramp in"
+            }                        {
+                "device_name": "reads nb"
+            }                        {
+                "device_name": "ramp-ended"
+            }
+        ]
+    },
+    "DDRAGO": {
+        "Vis cam DDRAGO": [
+            {
+                "device_name": "capteur GFT-REQ-93"
+            }
+        ],
+        "Viram DDRAGO": [
+            {
+                "device_name": "Quality Control Parameters.",
+                "device_value": "P50",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "https://www.eso.org/sci/facilities/paranal/instruments/vircam/doc/VIS-MAN-ESO-06000-0002_v101.pdf",
+                "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            }
+        ]
+    },
+    "OBSERVATIONS REQUESTS": {
+        "svom Gp": [
+            {
+                "device_name": ""
+            }
+        ],
+        "too": [
+            {
+                "device_name": "ToO target acquisition",
+                "device_value": "",
+                "device_date": "2019-10-02T23:59:05",
+                "device_group": "",
+                "device_pretty_name": "TEL.AG.START “F”
+                    TEL.AG.CONFIRM “F”
+                    TEL.AO.START “T”
+                    TEL.AO.CONFIRM “T”
+                    TEL.ROT.OFFANGLE “0.0”
+                    TEL.TARG.X “39.0”
+                    TEL.TARG.Y “−29.3”",
+                    "device_model": "",
+                "device_identifier": "",
+                "device_firmware": "",
+                "device_type": "",
+                "device_unit": "",
+                "device_error_code": 0
+            }
+        ],
+        "Calibration status": [
+            {
+                "device_name": "action/comment"
+            }
+        ],
+        "Calibration validate": [
+            {
+                "device_name": ""
+            }
+        ],
+        "fpoc dmeande": [
+            {
+                "device_name": "obs-id"
+            },
+            {
+                "device_name": "obs_startegy"
+            },
+            {
+                "device_name": "priority"
+            },
+            {
+                "device_name": "response"
+            }
+        ],
+        "aluminization": [],
+        "Integration plateform": [],
+        "AIT": [],
+    },
+    "ALERTS": {
+        "detection": [
+            {
+                "device_name": "SVOM"
+            },
+            {
+                "device_name": "GCN"
+            }
+        ],
+        "voevent": [
+            {
+                "device_name": "first connection"
+            },
+            {
+                "device_name": "fichier xml XSD"
+            }
+        ],
+        "voevent send": [
+            {
+                "device_name": "details"
+            },
+            {
+                "device_name": "fichier debut"
+            }
+        ],
+        "pipeline": [
+            {
+                "device_name": "rapports"
+            }
+        ],
+        "detection": [
+            {
+                "device_name": "SVOM"
+            },
+            {
+                "device_name": "GCN"
+            }
+        ],
+        "fin d'alerte": [
+            {
+                "device_name": "service"
+            }
+        ],
+        "gcn non svom": [
+            {
+                "device_name": "ecoute"
+            },
+            {
+                "device_name": "message send"
+            }
+        ],
+        "strategy change": [
+            {
+                "device_name": "id_strategie"
+            }
+        ],
+        "Alert manager": [
+            {
+                "device_name": "status"
+            },
+            {
+                "device_name": "nouveau"
+            }
+        ],
+        "Alert user": [
+            {
+                "device_name": "close"
+            },
+            {
+                "device_name": "start"
+            },
+            {
+                "device_name": "archivage"
+            }
+        ],
+        "Routine manager": [
+            {
+                "device_name": "name"
+            },
+            {
+                "device_name": "coord system id"
+            },
+            {
+                "device_name": "target ra dec"
+            }
+            {
+                "device_name": "executing night"
+            },
+            {
+                "device_name": "julian dat1"
+            }
+            {
+                "device_name": "julian day2"
+            },
+            {
+                "device_name": "start exposure preference"
+            }
+            {
+                "device_name": "duration"
+            },
+            {
+                "device_name": "has priority"
+            }
+            {
+                "device_name": "status"
+            }
+        ],
+        "Routine sequenc": [
+            {
+                "device_name": "name"
+            },
+            {
+                "device_name": "target coords"
+            },
+            {
+                "device_name": "jD1"
+            },
+            {
+                "device_name": "jd2"
+            },
+            {
+                "device_name": "strart exposure"
+            },
+            {
+                "device_name": "duration"
+            },
+            {
+                "device_name": "archivage"
+            }
+        ],
+        "ask demand": [
+            {
+                "device_name": "sequence"
+            },
+            {
+                "device_name": "plan"
+            },
+            {
+                "device_name": "plan description"
+            },
+            {
+                "device_name": "plan time"
+            },
+            {
+                "device_name": "seq time"
+            },
+            {
+                "device_name": "tot"
+            },
+            {
+                "device_name": "planned/executed/rejected"
+            }
+        ],
+        "T prefered unknown 85": [
+            {
+                "device_name": "ounds intervals Dj Fj"
+            },
+            {
+                "device_name": "Plan start"
+            },
+            {
+                "device_name": "plan end"
+            },
+            {
+                "device_name": "jD1"
+            },
+            {
+                "device_name": "jD2"
+            },
+            {
+                "device_name": "Tprefered"
+            },
+            {
+                "device_name": "planned/executed/rejected"
+            },
+            {
+                "device_name": "TSP TEP time start"
+            },
+            {
+                "device_name": "jtime endD2"
+            },
+            {
+                "device_name": "delta TL"
+            },
+            {
+                "device_name": "delta TR"
+            }
+        ],
+    }
 }
