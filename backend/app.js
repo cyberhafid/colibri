@@ -5,7 +5,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var indices = require('./routes/indices');  
+
+var sensors = require('./routes/sensors');  
 var cors = require('cors')
 var app = express();
 
@@ -18,6 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/indice', indices);
+app.use('/sensors', sensors);
 
 module.exports = app;
