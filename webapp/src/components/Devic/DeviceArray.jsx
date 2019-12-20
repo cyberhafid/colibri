@@ -7,7 +7,7 @@ import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import DeviceService from '../DeviceService';
 import sensors from "../../json/colibri";
-
+import axios from 'axios';
 export default class DeviceArray extends Component {
 
     constructor() {
@@ -46,7 +46,6 @@ export default class DeviceArray extends Component {
        //this.serviceactiv.getJson().then(datas => this.setState({ groupta: datas.Environment}));
        this.serviceactiv.getJson().then(datas => this.setState({ deviceta: datas.Environment.Weather}));
        // console.log('didmount' + JSON.stringify(this.state.categorizes))
-       console.log('ddddddd' + JSON.stringify(this.state.sensors));
 
     }
 
@@ -59,11 +58,58 @@ export default class DeviceArray extends Component {
 
     onDevicenGroup(event) {
         this.setState({ groupid: event.value });
-    }
+        //axios.get(`http://localhost:5000/device/${groupid}`)
+        const doudou =(this.state.categorieid.label);
+
+               console.log('ddddddd' + JSON.stringify(this.state.categorieid.label));
+        return  axios
+        .get(`http://localhost:5000/sensors/device/${doudou}`)
+
+                 //  .then(res => {
+            //    const deviceli = res.data;
+              //         this.setState({
+                //   deviceli  
+         .then(res => res.data);                  
+               // });
+                //console.log('ddddddd' + JSON.stringify(this.state.groupid));
+
+                
+             // })
+              //.catch((err) => console.log(err));
+          }
+    
+
+          onDevicenGroupokkkk(event) {
+            this.setState({ groupid: event.value });
+            return  axios
+            .get('https://opendata.paris.fr/api/datasets/1.0/search/?q=handicap&rows=100'
+          )
+          .then(res => res.data.datasets,console.log('ddddddd'+ JSON.stringify(this.state.groupid))  );
+          }
 
     onDevicenDevice(event) {
         this.setState({ deviceid: event.value });
+
     }
+
+    fetchUserData() {
+        axios.get(`http://localhost:3000/users/${this.context.id}`)
+          .then(res => {
+            const mises = res.data.mises;
+            const user = res.data;
+            this.setState({
+              mises,
+              user,
+            
+            });
+          })
+          .catch((err) => console.log(err));
+      }
+
+
+
+
+
 
     render() {
 
