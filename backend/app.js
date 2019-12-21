@@ -22,7 +22,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/categories', categories);
 app.use('/categories/cata/:username', categories);
+app.use('/categories/catas/:id', categories);
+app.use('/categories/cato/:id', categories);
 app.use('/sensors', sensors);
+app.use('/sensors/device/:id', sensors);
+
 //app.use('/indice', indices);
 //app.use('/api/v1/examples', examplesRouter);
 

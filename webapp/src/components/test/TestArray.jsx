@@ -26,6 +26,7 @@ export default class TestArray extends Component {
             ],
 
             categorieta: [],
+            groupta: [],
             categorieli: null,
             categorieid: null,
      
@@ -50,27 +51,41 @@ export default class TestArray extends Component {
 
 
     onDevicenCategorize(event) {
-        this.setState({ categorieid: event.value, groups: event.value });
+        this.setState({ categorieid: event.value});
+       // console.log('categories state' + JSON.stringify(this.state.categorieid));
+      if (this.state.categorieid) {
 
+       // console.log((this.state.categorieid));
+      
+     console.log(Object.values(this.state.categorieid)[0]);
+    
       //  this.setState({ groupid: event.value });
        // axios.get(`http://localhost:3000/users/${this.context.id}`)
-       axios.get(`http://localhost:5000/categories/cat`)
+     //  axios.get(`http://localhost:5000/categories/cat/${(Object.values(this.state.categorieid)[0])}`)
+      axios.get(`http://localhost:5000/categories/cat`)
 
           .then(res => {
-            const mises = res.data.Environment;
-            const user = res.data;
-            console.log('mises' + JSON.stringify(mises));
+           // const mises = res.data;
 
             this.setState({
-              mises,
-              user,
+                groupta :res.data,
+   
             
             });
 
+            console.log('mises' + JSON.stringify(this.state.groupta));
+
 
           })
+
+     
+
+
+       
           .catch((err) => console.log(err));
+        };
       }
+    
 
 
 
@@ -82,7 +97,7 @@ export default class TestArray extends Component {
         });
 
 
-        console.log('render' + JSON.stringify(this.state.categorieid))
+       // console.log('render' + JSON.stringify(this.state.categorieli))
         let headerGroup = <ColumnGroup>
 
             <Row>
