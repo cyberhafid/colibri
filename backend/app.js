@@ -22,9 +22,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/categories', categories);
 app.use('/categories/cata/:username', categories);
-
 app.use('/sensors', sensors);
-app.use('/indice', indices);
-app.use('/api/v1/examples', examplesRouter);
+//app.use('/indice', indices);
+//app.use('/api/v1/examples', examplesRouter);
 
 module.exports = app;

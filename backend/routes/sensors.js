@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const data = require('../test/colibri');
+//const data = require('../test/colibri.json');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     //const data = require('../test/colibri');
     res.json(data)
       
-})
+});
   
 
 router.get('/device/:id', (req, res) => {

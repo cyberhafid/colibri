@@ -58,7 +58,7 @@ export default class DeviceArray extends Component {
         //axios.get(`http://localhost:5000/device/${groupid}`)
         const doudou =(this.state.categorieid.label);
 
-               console.log('ddddddd' + JSON.stringify(this.state.categorieid.label));
+               console.log('rrrrrr' + JSON.stringify(this.state.categorieid.label));
         return  axios
         .get(`http://localhost:5000/sensors/device/${doudou}`)
 

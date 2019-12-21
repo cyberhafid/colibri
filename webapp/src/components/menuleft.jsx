@@ -9,7 +9,9 @@ export default class MenuLeft extends Component {
       items: [
         {
           label: 'GENERAL',
-          items: []
+          items: [{ label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' }
+    
+          ]
         },
 
         {
