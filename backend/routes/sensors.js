@@ -16,35 +16,23 @@ router.get('/', function(req, res, next) {
 });
   
 
-router.get('/devifffce/:id', (req, res) => {
+router.get('/devddice/:id', (req, res) => {
   const { id } = req.params.id;
  // res.send({ id });
-  res.send(coli);
-});
-
-
-router.get('/derrvice/:id', (req, res) => {
-let cat_id = req.params.id;
-
-
-res.send(coli.cat_id)
+  res.send(coli.id);
 });
 
 
 
 router.get('/device/:id',function(req,res){
-  coli.findById(req.params.id)
-      .then(data => {
-          if(!data) {
-              console.log("data not found");            
-          }
-          res.send(coli);
-      }).catch(err => {
+  let cat_id = req.params.id;
 
-        console.log("error");
 
-      });
+  res.json(coli)
+  console.log('2222' + JSON.stringify(coli));
   });
+
+
 
 
 module.exports = router;
