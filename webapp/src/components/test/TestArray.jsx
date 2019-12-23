@@ -23,115 +23,52 @@ export default class TestArray extends Component {
                 { filter: 'Strategie', camOne: 'PLOTS', camTwo: '40%', camThree: '$54,406.00' },
                 { filter: 'List of Picture', camOne: 'PLOTS', camTwo: '40%', camThree: '$54,406.00' }
 
-            ],
+            ]
 
-            categorieta: [],
-            groupta: [],
-            categorieli: null,
-            categorieid: null,
+
      
         };
-        this.serviceactiv = new DeviceService();
-        this.onDevicenCategorize = this.onDevicenCategorize.bind(this);
+
 
 
     }
     componentDidMount() {
-        this.serviceactiv.getJson().then(datas => this.setState({ categorieta: datas }));
 
-       // console.log('didmount' + JSON.stringify(this.state.categorizes))
-
-    }
-
-    onDevicenCategorize(event) {
-
+        this.fetchTrendingRepositories();
     }
 
 
-
-
-    onDevicenCategorize(event) {
-        this.setState({ categorieid: event.value});
-       // console.log('categories state' + JSON.stringify(this.state.categorieid));
-      if (this.state.categorieid) {
-
-       // console.log((this.state.categorieid));
-      
-     console.log(Object.values(this.state.categorieid)[0]);
-    
-      //  this.setState({ groupid: event.value });
-       // axios.get(`http://localhost:3000/users/${this.context.id}`)
-     //  axios.get(`http://localhost:5000/categories/cat/${(Object.values(this.state.categorieid)[0])}`)
-      axios.get(`http://localhost:5000/categories/cat`)
-
-          .then(res => {
-           // const mises = res.data;
-
-            this.setState({
-                groupta :res.data,
-   
-            
-            });
-
-            console.log('mises' + JSON.stringify(this.state.groupta));
-
-
-          })
-
-     
-
-
-       
-          .catch((err) => console.log(err));
-        };
+    fetchTrendingRepositories = async () => {
+        const { data: { items } } = await axios({
+          baseURL: 'https://api.github.com/',
+          url: "/search/repositories",
+          params: {
+            sort: 'stars',
+            order: 'desc',
+            q: 'language:javascript created:>2018-04-15',
+          }
+        })
+      console.log(items);
+        return items.map(({
+          id, full_name, html_url, description
+        }) => ({
+          id,
+          name: full_name,
+          url: html_url,
+          description
+        }));
       }
-    
+
 
 
 
 
     render() {
 
-        let categorieli = Object.keys(this.state.categorieta).map((icon) => {
-            return { label: icon, value: icon };
-        });
-
-
-       // console.log('render' + JSON.stringify(this.state.categorieli))
-        let headerGroup = <ColumnGroup>
-
-            <Row>
-                <Column header="Filter" />
-                <Column header="Image Master N" />
-  
-            </Row>
-        </ColumnGroup>;
-
         return (
             <div>
-
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-4">
-
-                            <h3>categories</h3>
-                            <Dropdown value={this.state.categorieid} options={categorieli} onChange={this.onDevicenCategorize} placeholder="Select a categories" optionLabel="label" />
-                            <div style={{ marginTop: '.5em' }}>{this.state.categorieid ? 'Selected City: ' + this.state.categorieid.label : 'No city selected'}</div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-
-
                 <div className="content-section implementation">
-                    <DataTable value={this.state.categorieid} headerColumnGroup={headerGroup}>
-                        <Column field="filter" />
-                        <Column field="camOne" />
-           
-                    </DataTable>
+      
                 </div>
             </div>
 
