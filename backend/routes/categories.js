@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get("/cat", function(req, res) {
+router.get("/cat/:id", function(req, res) {
   //let coli = require('../test/Excolibri.json');
   res.send(coli);
  });

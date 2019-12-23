@@ -23,7 +23,7 @@ app.use('/users', usersRouter);
 app.use('/categories', categories);
 app.use('/categories/cata/:username', categories);
 app.use('/categories/catas/:id', categories);
-app.use('/categories/cato/:id', categories);
+app.use('/categories/cat/:id', categories);
 app.use('/sensors', sensors);
 app.use('/sensors/device/:id', sensors);
 
