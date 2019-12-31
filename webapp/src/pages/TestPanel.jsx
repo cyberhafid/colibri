@@ -1,6 +1,7 @@
 import React from 'react';
 import { TabView, TabPanel } from 'primereact/tabview';
 import TestArray from '../components/test/TestArray';
+import Produits from '../components/test/produits';
 
 function TestPanel() {
   return (
@@ -18,15 +19,16 @@ function TestPanel() {
 
         <TabView>
 
+          <TabPanel header="Last operation">
+            <div>
+          <Produits />
+            </div>
+          </TabPanel>
+
           <TabPanel header="List devices">
             <div>
           
               <TestArray />
-            </div>
-          </TabPanel>
-          <TabPanel header="Last operation">
-            <div>
-          
             </div>
           </TabPanel>
 

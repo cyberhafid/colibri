@@ -74,3 +74,48 @@ let getMapFromArray = deviceg.reduce((acc, item) => {
 
 return acc;
 }, {});
+
+---------------------------------------------recup URL  
+
+
+fetchTrendingRepositories = async () => {
+  const { data: { items } } = await axios({
+    baseURL: 'https://api.github.com/',
+    url: "/search/repositories",
+    params: {
+      sort: 'stars',
+      order: 'desc',
+      q: 'language:javascript created:>2018-04-15',
+    }
+  })
+console.log(items);
+//je place le resultat dans un objet avec des champs només
+  return items.map(({
+    id, full_name, html_url, description
+  }) => ({
+    id,
+    name: full_name,
+    url: html_url,
+    description
+  }));
+}
+
+---------------------------------------------------BASE SIMPLE STATE JSON
+}
+componentDidMount() {
+  this.getTyope().then(data => this.setState({ items: data }));
+}
+
+getTyope() {
+  return  axios
+  .get('http://localhost:5000/sensors/device/Environment'
+)
+.then(res => res.data.Environment);
+}
+-----------------------------------------RECUPERATION VARIABLE
+let endpoint = Object.values(this.state.categorieid)[0]; 
+
+
+// onst response = await fetch(`${API}${endpoint}`, {
+
+  axios.get(`${endpoint}`)

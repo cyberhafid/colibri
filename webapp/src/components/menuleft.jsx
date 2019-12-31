@@ -13,7 +13,12 @@ export default class MenuLeft extends Component {
     
           ]
         },
-
+        {
+          label: 'Produits',
+          items: [
+          { label: 'Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
+          ]
+        },
         {
           label: 'CALIBRATION',
           items: [{ label: 'Plots Camera', icon: 'pi pi-fw pi-home', url: '/admin/calibration' },
