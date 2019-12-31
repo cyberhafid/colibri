@@ -183,8 +183,8 @@ class Fireflies extends Component {
         fireflies.forEach((firefly) => { firefly.updateCanvasSize(width,height) });
 
         this.setState({
-            width: width,
-            height: height
+            width: width/2,
+            height: height/2
         });
     }
 
@@ -224,14 +224,21 @@ class Fireflies extends Component {
             displayFpsStats = this.props.displayFpsStats;
 
         return (
-            <>
+       
+
+<div className="container">
+        <div className="row fits">
+            <div className="col-sm-6 ">
+       
                 <canvas id="fireflies-canvas" width={this.state.width} height={this.state.height} style = {{ WebkitFilter: `blur(${this.state.settings.blur}px)` }}></canvas>
                 { displayParamsChanger &&
                     <ParamsController data={this.state.settings} onParamChanged={this.paramChangedHandler} ></ParamsController> }
                 { displayFpsStats &&
                     <FPSStats /> }    
 
-            </>
+            
+</div></div>
+            </div>
         );
     }
 }

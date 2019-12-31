@@ -1,4 +1,4 @@
-import 'react-dat-gui/build/react-dat-gui.css';
+import './fireflies.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import DatGui, { DatColor, DatNumber, DatBoolean } from 'react-dat-gui';
@@ -12,6 +12,7 @@ class ParamsController extends Component {
   render() {
     const data = this.props.data;
     return (
+      <div className="fitscontrol">
       <DatGui data={data} onUpdate={this.props.onParamChanged}>
         <DatColor path='color' label='Color' />
         <DatNumber path='count' label="Count" min={0} max={5000} step={50}/>
@@ -23,6 +24,7 @@ class ParamsController extends Component {
         <DatBoolean path="differentSize" label="Different size" />
         <DatBoolean path="isGradient" label="Gradient style" />
       </DatGui>
+      </div>
     )
   }
 }

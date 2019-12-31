@@ -10,6 +10,7 @@ import ObservationPanel from '../pages/ObservationPanel';
 import StrategiePanel from '../pages/StrategiePanel';
 import FitsPanel from '../pages/FitsPanel';
 import TestPanel from '../pages/TestPanel';
+import ProduitPanel from '../pages/ProduitPanel';
 
 export default class AdminRouter extends Component {
   render() {
@@ -25,6 +26,7 @@ export default class AdminRouter extends Component {
         <Route  exact path='/admin/strategie' component={StrategiePanel} />
         <Route  exact path='/admin/fits' component={FitsPanel} />
         <Route  exact path='/admin/test' component={TestPanel} />
+        <Route  exact path='/admin/fireflies' component={ProduitPanel} />
 
         <Route   path='/admin/api' component={DocApi} />
     </Switch>

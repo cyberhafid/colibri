@@ -37,8 +37,6 @@ export default class MenuLeft extends Component {
           label: 'STRATEGIES',
           items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin/strategie' },
           { label: 'New or modify', icon: 'pi pi-fw pi-user', url: '/' }
-
-
           ]
         },
         {

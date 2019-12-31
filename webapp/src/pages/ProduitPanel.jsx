@@ -1,15 +1,16 @@
 import React from 'react';
 import { TabView, TabPanel } from 'primereact/tabview';
-import FitsViewer from '../components/Fit/FitViewer';
+import Fireflies from '../components/Fireflies/Fireflies';
+/* import { StrateArray } from '../components/Strat/StrateArray';
+import { StrateList } from '../components/Strat/StrateList'; */
 
-
-function FitsPanel() {
+function ProduitPanel() {
   return (
 
     <div>
       <div className="content-section introduction">
         <div className="feature-intro">
-          <h1>fits  </h1>
+          <h1>Strategie  </h1>
 
         </div>
       </div>
@@ -19,13 +20,20 @@ function FitsPanel() {
 
         <TabView>
 
-          <TabPanel header="fits viewer">
+          <TabPanel header="Strategie active">
             <div>
-          <FitsViewer />
-
+          <Fireflies />
+           
             </div>
           </TabPanel>
-    
+
+
+          <TabPanel header="List strategie">
+            <div>
+        
+            </div>
+          </TabPanel>
+
 
           <TabPanel header="Informations">
             <div>
@@ -41,4 +49,4 @@ function FitsPanel() {
     </div>
   );
 }
-export default FitsPanel;
+export default ProduitPanel;
