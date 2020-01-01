@@ -9,16 +9,11 @@ export default class MenuLeft extends Component {
       items: [
         {
           label: 'GENERAL',
-          items: [{ label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' }
-    
+          items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', url: '/admin' },
+          { label: 'Documentation', icon: 'pi pi-fw pi-file', url: '/admin/api' }
           ]
         },
-        {
-          label: 'Produits',
-          items: [
-          { label: 'Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
-          ]
-        },
+
         {
           label: 'CALIBRATION',
           items: [{ label: 'Plots Camera', icon: 'pi pi-fw pi-home', url: '/admin/calibration' },
@@ -29,14 +24,13 @@ export default class MenuLeft extends Component {
         },
         {
           label: 'DEVICE SENSORS',
-          items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin/device' },
-          { label: 'Alert', icon: 'pi pi-fw pi-user', url: '/' }
+          items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin/device' }
           ]
         },
         {
           label: 'STRATEGIES',
-          items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin/strategie' },
-          { label: 'New or modify', icon: 'pi pi-fw pi-user', url: '/' }
+          items: [{ label: 'List (New or modify)', icon: 'pi pi-fw pi-home', url: '/admin/strategie' }
+
           ]
         },
         {
@@ -45,21 +39,10 @@ export default class MenuLeft extends Component {
           { label: 'PLANNING', icon: 'pi pi-fw pi-user', url: '/' }
           ]
         },
-        {
-          label: 'DOCUMENTATION',
-          items: [{ label: 'Documentation', icon: 'pi pi-fw pi-file', url: '/admin/api' },
-            { label: 'Graphique', icon: 'pi pi-fw pi-file', url: '/admin/graphique' }
-          ]
-        },
-        {
-          label: 'Account',
-          items: [{ label: 'Configuration', icon: 'pi pi-fw pi-cog', command: () => { props.history.push('/admin/config'); } },
-          { label: 'Sign Out', icon: 'pi pi-fw pi-power-off', command: () => { props.logout(); } }]
-        },
-        {
-          label: 'OUTILS',
-          items: [{ label: 'List', icon: 'pi pi-fw pi-home', url: '/admin' },
-          { label: 'Alert', icon: 'pi pi-fw pi-user', url: '/admin/users' }
+                {
+          label: 'Test',
+          items: [          { label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' },
+          { label: 'Produits Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
           ]
         },
       ]

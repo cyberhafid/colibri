@@ -1,12 +1,12 @@
 
 import React, { Component } from 'react';
+//const Fits = require('./fits');
 
 
 
 
 export default class FitsViewer extends Component {
     render() {
-       // const FITS = require('./fits');
 
 
     return(

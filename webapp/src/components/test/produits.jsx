@@ -2,11 +2,14 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 import { DataTable } from 'primereact/datatable';
+import {  Col } from 'react';
 import { Column } from 'primereact/column';
 import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import DeviceService from '../DeviceService';
 import sensors from "../../json/colibri";
+import logo from './logo192.png'; 
+import AtomicImage from './AtomicImage';
 
 export default class Produits extends Component {
 
@@ -28,6 +31,10 @@ export default class Produits extends Component {
 
         };
         this.serviceactiv = new DeviceService();
+        this.actionTemplate = this.actionTemplate.bind(this);
+        this.actionSize = this.actionSize.bind(this);
+        this.imageDimensions = this.imageDimensions.bind(this);
+        
      
 
     }
@@ -37,6 +44,22 @@ export default class Produits extends Component {
        // console.log('didmount' + JSON.stringify(this.state.categorizes))
 
     }
+
+    actionTemplate(rowData, column) {
+        var src = {logo};
+        return <img src={logo} alt={logo} width="48px" />;
+    }
+
+    async imageDimensions(uri) {
+        return new Promise((resolve, reject) => {
+          Image.getSize(uri, (width, height) => {
+            resolve({ width: width, height: height });
+          }, (error) => { reject(error) });
+        });
+      }
+    actionSize(rowData, column) {
+       return <AtomicImage src={logo}/> 
+    };
 
     render() {
 
@@ -53,25 +76,14 @@ export default class Produits extends Component {
                 <Column header="Diff Master" />
                 <Column header="Moy Master" />
                 <Column header="Validation" />
+             
             </Row>
         </ColumnGroup>;
 
         return (
             <div>
-
-     
-
-
                 <div className="content-section implementation">
-                    <DataTable value={this.state.datacam} headerColumnGroup={headerGroup}>
-                        <Column field="filter" />
-                        <Column field="camOne" />
-                        <Column field="camTwo" />
-                        <Column field="camThree" />
-                        <Column field="camOne" />
-                        <Column field="camTwo" />
-                        <Column field="camThree" />
-                    </DataTable>
+  
                 </div>
             </div>
 

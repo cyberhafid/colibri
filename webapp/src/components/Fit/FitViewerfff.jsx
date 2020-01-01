@@ -1,12 +1,12 @@
  
 import React, { Component } from 'react';
+const Fits = require('./fits');
 
 
 
 
     export default class FitsViewer extends Component {
     render () {
-     const FITS = require('./fits');
 
         var NROIS = 2;			// number of ROIS -- sufficient for code but not for html
         var fits;				// FITS instance
@@ -56,6 +56,7 @@ import React, { Component } from 'react';
         };
 
         }
+    }
 
         // called when user opens a local file for display
         function handleLocalFileSelect(event) {
@@ -176,7 +177,7 @@ import React, { Component } from 'react';
             <div>
         
         <div className="container">
-        
+        <Fits />
                  </div>
         
             </div>
