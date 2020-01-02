@@ -43,6 +43,7 @@ export default class MenuLeft extends Component {
           label: 'Test',
           items: [          { label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' },
           { label: 'Produits Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
+          
           ]
         },
       ]

@@ -11,39 +11,24 @@ function ProduitPanel() {
       <div className="content-section introduction">
         <div className="feature-intro">
           <h1>Strategie  </h1>
-
         </div>
       </div>
 
       <div className="content-section implementation">
-
-
         <TabView>
-
           <TabPanel header="Strategie active">
             <div>
-          <Fireflies />
-           
+              <Fireflies />
             </div>
           </TabPanel>
-
-
           <TabPanel header="List strategie">
             <div>
-        
             </div>
           </TabPanel>
-
-
           <TabPanel header="Informations">
             <div>
-
             </div>
-
           </TabPanel>
-
-
-
         </TabView>
       </div>
     </div>

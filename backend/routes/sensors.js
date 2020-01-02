@@ -2,35 +2,30 @@ var express = require('express');
 var router = express.Router();
 //const coli = require('../test/colibri.json');
 let coli = require('../test/Excolibri.json');
+let baseURL= 'http://localhost:5000/sensors/';
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send(coli.Environment);
 });
 
+router.use(`/:id`, (req, res) => {
+  id = req.params.id;
+res.send(JSON.stringify(coli));
+ // res.send(baseURL);
+console.log('2222' + JSON.stringify(coli.id ));
 
-  router.get('/json', function (req, res) {
-    //const data = require('../test/colibri');
-    res.json(data)
-      
-});
-  
-
-router.get('/devddice/:id', (req, res) => {
-  const { id } = req.params.id;
- // res.send({ id });
-  res.send(coli.id);
 });
 
+router.get('/test/:id',function(req,res){
+  //let cat_id = req.params.id;
+  //res.send(baseURL + req.params.id);
 
-
-router.get('/device/:id',function(req,res){
-  let cat_id = req.params.id;
-
-
-  res.json(coli)
-  console.log('2222' + JSON.stringify(coli));
+ res.send(req.params.id)
+  //console.log('2222' + JSON.stringify(baseURL.cat_id));
   });
+
+
 
 
 
