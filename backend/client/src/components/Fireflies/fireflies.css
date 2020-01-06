@@ -1,0 +1,14 @@
+.fits {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    background-color: black;
+   
+  }
+
+  .fitscontrol {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    color: white;
+  }
