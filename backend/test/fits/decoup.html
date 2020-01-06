@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FITS Viewer</title>
+    <script language="JavaScript" type="text/javascript" src="decoup.js"></script>
+    <script>
+        var NROIS = 2; // number of ROIS -- sufficient for code but not for html
+        var fits; // FITS instance
+
+        function gebi(id) {
+            return document.getElementById(id);
+        }
+
+        window.onload = function () {
+            fits = new FITS(gebi("fits_div"), NROIS);
+            // connect callback when user selects a local file to display
+            gebi('filesel').addEventListener('change', handleLocalFileSelect, false);
+        }
+        function handleLocalFileSelect(event) {
+            var hiev = event.target;			// HTMLInputElement
+            var fill = hiev.files;				// FileList
+            var file = fill[0];
+            var reader = new FileReader();
+
+            reader.onload = function (event) {
+                var fr = event.target;			// FileReader
+                var ab = fr.result;				// ArrayBuffer
+                try {
+                    fits.setNewImage(file.name, ab);
+                    fits.showHeader(false);
+                } catch (e) {
+                    alert(e);
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        }
+
+      </script>
+</head>
+
+<body>
+    <div id="fits_div">
+        test
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td><input type='file' id='filesel' /></td>
+                <td></td>
+            </tr>
+        </table>
+        <table id='roiinfo'>
+
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>
