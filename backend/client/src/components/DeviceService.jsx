@@ -1,7 +1,7 @@
  
 import axios from 'axios';
-import listedevice  from '../json/sensors.json';
-const data = require('../json/colibri');
+import listedevice  from '../sensors.json';
+const data = require('../colibri.json');
 
 export default class DeviceService {
 

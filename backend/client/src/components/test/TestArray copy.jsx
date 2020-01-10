@@ -118,14 +118,10 @@ let endpoint = Object.values(this.state.categorieid)[0];
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-4">
-
                             <h3>categories</h3>
                             <Dropdown value={this.state.categorieid} options={categorieli} onChange={this.onDevicenCategorize} placeholder="Select a categories" optionLabel="label" />
                             <div style={{ marginTop: '.5em' }}>{this.state.categorieid ? 'Selected City: ' + this.state.categorieid.label : 'No city selected'}</div>
                         </div>
-
-
-
                     </div>
                 </div>
 

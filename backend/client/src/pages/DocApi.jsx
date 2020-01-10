@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Fieldset } from 'primereact/fieldset';
-import { Button } from 'primereact/button';
-
 
 export default class DocApi extends Component {
   render() {

@@ -6,7 +6,7 @@ import { Column } from 'primereact/column';
 import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import axios from 'axios';
-const data = require('../../json/colibri');
+const data = require('../../colibri.json');
 let baseURL= 'http://localhost:5000/sensors/';
 
 export default class TestArray extends Component {
@@ -53,7 +53,7 @@ export default class TestArray extends Component {
     return axios
       .get('http://localhost:5000/sensors/Environment')
       .then(res => (
-        res.data.categorieid,
+      //  res.data.categorieid,
         this.setState({ groupta: data.Environment})
        
      )

@@ -6,7 +6,6 @@ import { Column } from 'primereact/column';
 import { ColumnGroup } from 'primereact/columngroup';
 import { Row } from 'primereact/row';
 import DeviceService from '../DeviceService';
-import sensors from "../../json/colibri";
 import axios from 'axios';
 export default class DeviceArray extends Component {
 

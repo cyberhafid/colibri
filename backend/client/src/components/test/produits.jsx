@@ -2,10 +2,13 @@
 import React, { Component } from 'react';
 import { Table } from 'reactstrap';
 import DeviceService from '../DeviceService';
-import sensors from "../../json/colibri";
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { ColumnGroup } from 'primereact/columngroup';
 import logo from './logo192.png'; 
 import logo2 from './nasa.png'; 
 import AtomicImage from './AtomicImage';
+import {Row} from 'primereact/row';
 
 export default class Produits extends Component {
 
@@ -42,7 +45,7 @@ export default class Produits extends Component {
     }
 
     actionTemplate(rowData, column) {
-        var src = {logo};
+       // var src = {logo};
         return <img src={logo} alt={logo} width="48px" />;
     }
 
@@ -59,9 +62,26 @@ export default class Produits extends Component {
 
     render() {
 
+      let headerGroup = <ColumnGroup>
+                            <Row>
+                                <Column header="Brand" rowSpan={3} />
+                                <Column header="Sale Rate" colSpan={4} />
+                            </Row>
+                            <Row>
+                                <Column header="Sales" colSpan={2} />
+                           
+                            </Row>
+                            <Row>
+                                <Column header="Last Year" /><AtomicImage src={logo2}/>
+                                <Column header="This Year" />
+                              </Row>
+                        </ColumnGroup>;
+
      
         return (
-            <Table>
+
+          <div className="content-section implementation" >
+                <Table>
             <thead>
               <tr>
                 <th>#</th>
@@ -77,15 +97,17 @@ export default class Produits extends Component {
                 <td><AtomicImage src={logo2}/></td>
                 <td></td>
               </tr>
-              <tr>
-                <th scope="row">SIZE</th>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
               
             </tbody>
           </Table>
+
+          <DataTable value={this.state.datacam}  headerColumnGroup={headerGroup} >
+              <Column field="filter" header="type"  style={{ height: '3.5em' }} />
+              <Column field="value" header="Valeur"style={{ height: '3.5em' }} />
+              <Column field="camOne" header="camOne"style={{ height: '3.5em' }} />
+          </DataTable>
+
+      </div>
 
         );
     }

@@ -17,7 +17,7 @@ export default class AtomicImage  extends Component {
         return (<div>
                 dimensions width{width}, height{height}
                 <br/>
-                <img onLoad={this.onImgLoad} src={src}/>
+                <img alt="ajour" onLoad={this.onImgLoad} src={src}/>
                 </div>
                );
     }

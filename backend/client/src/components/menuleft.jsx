@@ -8,6 +8,13 @@ export default class MenuLeft extends Component {
     this.state = {
       items: [
         {
+          label: 'Test',
+          items: [ { label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' },
+          { label: 'Produits Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
+          
+          ]
+        },
+        {
           label: 'GENERAL',
           items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', url: '/admin' },
           { label: 'Documentation', icon: 'pi pi-fw pi-file', url: '/admin/api' }
@@ -39,13 +46,7 @@ export default class MenuLeft extends Component {
           { label: 'PLANNING', icon: 'pi pi-fw pi-user', url: '/' }
           ]
         },
-                {
-          label: 'Test',
-          items: [          { label: 'test', icon: 'pi pi-fw pi-home', url: '/admin/test' },
-          { label: 'Produits Fireflies', icon: 'pi pi-fw pi-user', url: '/admin/fireflies' }
-          
-          ]
-        },
+
       ]
     };
   }

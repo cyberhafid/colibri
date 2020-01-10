@@ -4,6 +4,7 @@ import TestArray from '../components/test/TestArray';
 import Produits from '../components/test/produits';
 import FitsViewer from '../components/Fit/FitViewer';
 import Fireflies from '../components/Fireflies/Fireflies';
+import Sourcenoefits from '../components/test/sourcenodefits';
 
 function TestPanel() {
   return (
@@ -17,7 +18,11 @@ function TestPanel() {
       <div className="content-section implementation">
 
         <TabView>
-          <TabPanel header="Produit compraison size atomic">
+        <TabPanel header="nodesource fits en attente">
+       <Sourcenoefits />
+   
+   </TabPanel>
+          <TabPanel header="en attente integrations">
        
               <Produits />
           
